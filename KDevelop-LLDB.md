@@ -29,12 +29,10 @@ LLDB support in similar feature-completeness as current GDB support
 #### Possible LLDB Interface to Use
 LLDB released LLDB-MI on 2014, and there is another project LLDBMI2 that does the same thing. Along with those, there is the C++ API that we can use. So the implementation can be done in three ways
 
-######  LLDB-MI
-http://www.codeplay.com/portal/lldb-mi-driver---part-1-introduction
+######  [LLDB-MI](http://www.codeplay.com/portal/lldb-mi-driver---part-1-introduction)
 Has a good separation of input/factory/output, seems only support remote debugging and have limited command implemented at the time of the blog written.
 
-###### LLDBMI2
-https://github.com/freedib/lldbmi2
+###### [LLDBMI2](https://github.com/freedib/lldbmi2)
 Seems to be a simple MI interface to LLDB, which is more lightweight to LLDB-MI. But only support local debugging and only support Mac OS X
 
 ###### C++ API
@@ -53,12 +51,14 @@ I'm staying at the university for summer research, which means a flexible schedu
 
 
 ## About me
-My name is Peifeng Yu, a master student at the University of Michigan majoring in Computer Science. I've been using KDE as my major desktop for years and really like the high configuration possibilities it provides. As a programmer, I use KDevelop for most of my projects (other than QtCreator ;-) ) because of its better support for CMake based projects. I was excited when it first announced the integration with clang compiler. Now here's opportunity to integrate further with llvm toolchain and it would be exciting if I can contribute to it.
+My name is Peifeng Yu, a master student at the University of Michigan majoring in Computer Science. I've been using KDE as my major desktop for years and really like the high configuration possibilities it provides. As a programmer, I use KDevelop for most of my projects because of its better support for CMake based projects (and yes, sometimes QtCreator if I'm using qmake ;-) ). I was excited when it first announced the integration with clang compiler. Now here's opportunity to integrate further with llvm toolchain and it would be exciting if I can contribute to it.
+
+As for the skills, I've been programming in C++ for about 5 years and it's my favorate language. And I love Qt, which makes coding a pleasure. I've several little programs written in Qt including my graduate project. Apart from that, I'm always curious about language implementation details and have read a lot about C++ and Qt internals. These knowledge seems unnecessary on the first sight, but they do help me handle tricky situations when the code goes wrong. I have experiences on CMake, too. All my own projects is using CMake as the build system. No need to mention Git, which I use on a daily basis.
 
 #### Contact Information
 Email: 7437103@gmail.com / aetf@unlimitedcodeworks.xyz
 Website: https://unlimitedcodeworks.xyz
-﻿Github: https://github.com/Aetf
+Github:https://github.com/Aetf
 Mozillian: https://mozillians.org/en-US/u/Aetf/
 
 [1]: https://bugs.eclipse.org/bugs/show_bug.cgi?id=405670
