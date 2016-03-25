@@ -46,16 +46,16 @@ This can be done by expose a interface class with all available lldb commands an
 ###### Possible LLDB Interface to Use
 LLDB released LLDB-MI on 2014, and there is another project LLDBMI2 that does the same thing. Along with those, there is the good old C++ API. Further investigation and evaluation is needed to finally determine on which one to use. Here just list a brief description of each choise.
 
-- [LLDB-MI](http://www.codeplay.com/portal/lldb-mi-driver---part-1-introduction)
+- LLDB-MI: http://www.codeplay.com/portal/lldb-mi-driver---part-1-introduction
     * Included in the LLDB source code, which means better support
     * A good separation of input/factory/output
     * Seems only support remote debugging
     * Limited command implemented at the time of the blog written (might have been changed since then)
-- [LLDBMI2](https://github.com/freedib/lldbmi2)
+- LLDBMI2: https://github.com/freedib/lldbmi2
     * Seems to be a simple MI interface to LLDB, which is more lightweight than LLDB-MI
     * Not official but actively maintained
     * Only support local debugging and only support Mac OS X
-- [C++ API](http://lldb.llvm.org/cpp_reference/html/index.html)
+- C++ API: http://lldb.llvm.org/cpp_reference/html/index.html
     * Directly link to LLDB, which should be fast and the API is mature
     * Must find a way to protect ourselves from debugger crashes
     * Write from scratch, can't reuse MI code for GDB
@@ -98,26 +98,25 @@ As said above, the GDBDebugger plugin contains many non GDB specific code. Rathe
 These scripts are used to make C++/STL and Qt objects easier for the user to read. Currently I'm not sure if they are still needed for LLDB. If so, this might need to be ported to LLDB data formatters.
 
 #### Tests
-The importance of tests can never be over emphasized. I'm going to start with the same unittests as GDB when applicable and add other tests when find problems during the implementation.
+The importance of tests can never be over emphasized. I'm going to start with the same unit tests as GDB when applicable and add other tests when find problems during the implementation.
 
 ## Timeline
 
 #### Milestones
-- __April 22__: if accepted, start by contributing little bug fixes to KDevelop to get familiar with the code base. Also investigate and play with different ways to talk with lldb.
-- __May 5__: around this time I should have done some demos on talking to lldb.
-- __May 31__: finish the final communication lldb infrastructure (part 1) based on previous experience gained.
-- __June 20__: Implement most important controllers and mangers (part 2).
-- __July 20__: Move non GDB specific classes into kdevplatform. UI should work for simple use cases.
+- __April 22__ (2 weeks): If accepted, I will start by contributing little bug fixes to KDevelop to get familiar with the code base. Besides that, the most work for this period will be investigating and playing with different ways to talk with lldb. It is important to have this period before actually starting coding, as the decision of which LLDB interface to use would affect the overall stability and quality of the plugin, and it deserves some careful thought.
+- __May 6__ (3.5 weeks): Around this time, I should have done some demos on talking to LLDB. Use this experience gained from previous weeks, I will start actually build the communication infrastructure with LLDB. This could be a totally rewrite from stratch or an extension of the previous demo depends on what method I choose.
+- __May 31__ (3 weeks): We should have a final communication infrastructure with LLDB (part 1) now. And based on that, I can start implement most of the important controllers and managers for the plugin, including `IPlugin`, `IDebugSession` and friends.
+- __June 21__ (4 weeks): Most of the important controllers and mangers (part 2) should have been implemented at this time. Although they may still contain stub methods which are related to UI setups and Drkonqi. I give this period the longest time because in my opinion, it is the UI that actually talks to users, and any small bug in it will frustrate them. Thus I not only need to implement them, but also polish them to some extent.
+- __July 19__ (4 weeks): The whole plugin should work for simple use cases by then. And the last 4 weeks are used to revise and finialize the code to fix any remaining bugs as well as move non GDB specific classes into kdevplatform.git. This period also serves as a buffer as we are always optimistic in estimating works and it always turns out to take longer!
 - __Augest 15__: Fine tune and bug fixes done, project finish.
 
 #### Availability
-I'm staying at the university for summer research, which means a flexible schedule and two project at the same time is the regular workload for a normal semaster. So there shouldn't be a problem.
-
+I will stay at the university for research during the summer break, which basically is another project to do. However, the time schedule for the research is flexible, and two project at the same time is the regular workload for a normal semaster. So I believe I can manage my time accrodingly and there shouldn't be a problem.
 
 ## About me
-My name is Peifeng Yu, a master student at the University of Michigan majoring in Computer Science. I've been using KDE as my major desktop for years and really like the high configuration possibilities it provides. As a programmer, I use KDevelop for most of my projects because of its better support for CMake based projects (and yes, sometimes QtCreator if I'm using qmake ;-) ). I was excited when it first announced the integration with clang compiler. Now here's opportunity to integrate further with llvm toolchain and it would be exciting if I can contribute to it.
+My name is Peifeng Yu, a master student at the University of Michigan majoring in Computer Science. I've been using KDE as my major desktop for years and really enjoy the amount of customization it allows. As a programmer, I use KDevelop for most of my projects because of its better support for CMake based projects (and yes, sometimes QtCreator if I'm using qmake ;-) ). I was excited when it first announced the integration with clang compiler. Now here's opportunity to integrate further with llvm toolchain and it would be exciting if I can contribute to it.
 
-As for the skills, I've been programming in C++ for about 5 years and it's my favorate language. I consider myself a experienced C++ programmer thanks to my experience on ACM/ICPC during my undergraduate, which sharpened my program skills and helped me gain more insight in algorithms.
+As for the skills, I've been programming in C++ for about 5 years and it's my favorite language. I consider myself an experienced C++ programmer thanks to my experience on ACM/ICPC during my undergraduate, which sharpened my program skills and helped me gain more insight in algorithms.
 
 And I love Qt, which makes coding a pleasure. Although not worked on very big projects (That's why GSoC!), I have several little programs written in C++/Qt including my graduate project, which are all hosted on Github. Apart from that, I'm always curious about language implementation details and have read a lot about C++ and Qt internals. These knowledge seems unnecessary on the first sight, but they do help me handle tricky situations when the code goes wrong. CMake and Git are also my friends, which I use on a daily basis.
 
