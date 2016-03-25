@@ -1,7 +1,7 @@
 # GSoC 2016 Project: KDevelop: LLDB Support
 
 ## Introduction
-Enabling kdevelop to use lldb as a debugging backend, which would be especially useful on Max OS X and Windows, where gdb support is rather scarce, and it can also help people that want to switch to lldb on linux (like me!) by adding decent IDE support.
+Enabling KDevelop to use LLDB as a debugging backend, which would be especially useful on Max OS X and Windows, where gdb support is rather scarce, and it can also help people that want to switch to lldb on linux (like me!) by adding decent IDE support.
 
 ## Project Goals
 LLDB support in similar feature-completeness as current GDB support. The user should be able to select what debugger to use intuitively on a per launch configuration base. The following function should be supported.
@@ -124,7 +124,7 @@ And I love Qt, which makes coding a pleasure. Although not worked on very big pr
 Besides that, I have a strong background on all basic software related fields, such as algorithm, data structure, compiler, computer archetecture and operating systems, as learnt in my undergraduate (Software Engineering, Xi'an Jiaotong University) and graduate (Computer Science, University of Michigan) study.
 
 #### Contact Information
-Email: 7437103@gmail.com / aetf@unlimitedcodeworks.xyz
-Website: https://unlimitedcodeworks.xyz
-Github:https://github.com/Aetf
-Mozillian: https://mozillians.org/en-US/u/Aetf/
+- Email: 7437103@gmail.com / aetf@unlimitedcodeworks.xyz
+- Website: https://unlimitedcodeworks.xyz
+- Github:https://github.com/Aetf
+- Mozillian: https://mozillians.org/en-US/u/Aetf/
