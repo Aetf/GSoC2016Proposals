@@ -125,6 +125,6 @@ Besides that, I have a strong background on all basic software related fields, s
 
 #### Contact Information
 - Email: 7437103@gmail.com / aetf@unlimitedcodeworks.xyz
-- Website: https://unlimitedcodeworks.xyz
+- Website: https://unlimitedcodeworks.xyz (Partially in English, i18n is on my todo list XD)
 - Github:https://github.com/Aetf
 - Mozillian: https://mozillians.org/en-US/u/Aetf/
